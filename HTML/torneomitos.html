@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Torneo Mitos y Leyendas</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+ <link rel="stylesheet" href="../CSS/stylesheet.css">
+
+</head>
+
+<body>
+
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-xl navbar-dark navbar-custom mi-menu">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand logo" href="../HTML/index.html">
+        <img src="../IMG/Logoweb.png" alt="logoweb" width="100%" height="70">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+
+        <!-- Menu -->
+        <ul class="navbar-nav mx-auto gap-3">
+          <li class="nav-item dropdown">
+            <a class="nav-link nav-pill dropdown-toggle" data-bs-toggle="dropdown" href="../HTML/cart.html" role="button" aria-expanded="false">Tienda</a>
+            <ul class="dropdown-menu custom-dropdown">
+              <li><a class="downdrop-item" href="../HTML/TCG.html">TCG</a></li>
+              <li><a class="downdrop-item" href="../HTML/Juegosmesa.html">Juegos de mesa</a></li>
+              <li><a class="downdrop-item" href="../HTML/accesorios.html">Accesorios</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" href="../HTML/eventos.html">Eventos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" href="../HTML/reservas.html">Reservas</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" href="../HTML/nosotros.html">Nosotros</a>
+          </li>
+        </ul>
+
+        <!-- Search -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="input-group">
+            <input type="text" class="form-control search-box" placeholder="Buscar">
+            <span class="input-group-text bg-white border-0 rounded-end-pill">
+              <i class="bi bi-search"></i>
+            </span>
+          </div>
+
+          <a href="../HTML/cart.html" class="position-relative text-white">
+            <i class="bi bi-cart3 fs-2"></i>
+             <!-- CONTADOR -->
+                <span id="cartCount"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                    0
+
+                </span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+
+<!-- Carrusel -->
+    <div id="carruselMitos" class="carousel slide carousel-mitos" data-bs-ride="carousel">
+            
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carruselMitos" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carruselMitos" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carruselMitos" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carruselMitos" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carruselMitos" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#carruselMitos" data-bs-slide-to="5"></button><button type="button" data-bs-target="#carruselMitos" data-bs-slide-to="6"></button>
+        </div>
+                
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="../IMG/mitos6.jpg" alt="persona jugando tcg" class="d-block w-100">
+            </div>
+
+            <div class="carousel-item">
+                <img src="../IMG/mitos2.jpg" alt="taller de pintura" class="d-block w-100">
+            </div>
+
+            <div class="carousel-item">
+                <img src="../IMG/mitos3.jpg" alt="torneo mitos y leyendas" class="d-block w-100">
+            </div>
+
+             <div class="carousel-item">
+                <img src="../IMG/mitos4.jpg" alt="torneo mitos y leyendas" class="d-block w-100">
+            </div>
+
+             <div class="carousel-item">
+                <img src="../IMG/mitos5.jpg" alt="torneo mitos y leyendas" class="d-block w-100">
+            </div>
+
+             <div class="carousel-item">
+                <img src="../IMG/mitos1.jpg" alt="torneo mitos y leyendas" class="d-block w-100">
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carruselMitos" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carruselMitos" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <section class="container py-5 evento-info">
+
+        <h2 class="text-center section-title fw-bold">
+            Torneo nacional de Mitos y Leyendas
+        </h2>
+
+        <h2 class="text-center section-subtitle">
+            Así se vivió el Torneo Nacional de Mitos y Leyendas en La Guarida de Vermi
+        </h2>
+
+        <p>
+            El Torneo Nacional de Mitos y Leyendas fue todo un éxito en La Guarida de Vermi – Hobby Center. Durante la jornada, jugadores de distintas ciudades se reunieron para enfrentarse en intensos duelos cargados de estrategia, concentración y mucha pasión por el juego.
+            <br> <br>
+            Desde las primeras rondas se sintió el nivel competitivo: mazos bien construidos, jugadas calculadas y partidas que mantuvieron a todos al borde de la mesa. La comunidad respondió con una energía increíble, demostrando que el juego organizado sigue creciendo con fuerza.
+        </p>
+
+        <h3>
+            El protagonista del evento
+        </h3>
+
+        <p>
+            Mitos y Leyendas volvió a reunir a su comunidad en un evento donde la mitología, la estrategia y la habilidad marcaron cada enfrentamiento. Cada jugador dejó todo en el campo de batalla, defendiendo su honor y su mazo con determinación.
+        </p>
+
+        <h3> 
+            Lo que vivimos durante el torneo
+        </h3>
+
+        <ul>
+            <li>Rondas competitivas llenas de emoción</li>
+            <li>Gran participación y excelente nivel de juego</li>
+            <li>Intercambio de cartas y estrategias entre jugadores</li>
+            <li>Un ambiente sano, respetuoso y muy apasionado</li>
+        </ul>
+
+        <p> 
+            La premiación reconoció el esfuerzo y dedicación de los mejores duelistas, quienes demostraron por qué están entre los más destacados del circuito nacional.
+        </p>
+
+        <h3>
+          Comunidad que crece
+        </h3>
+
+        <p>
+          Más allá de los resultados, el verdadero triunfo fue la unión de la comunidad. Ver la tienda llena, escuchar las jugadas decisivas y compartir la emoción de cada partida nos recordó por qué La Guarida de Vermi es un punto de encuentro para los amantes de los juegos de cartas.
+          <br>
+          Gracias a todos los que participaron, apoyaron y vivieron esta experiencia con nosotros. Seguiremos trabajando para traer más eventos, más torneos y más momentos inolvidables.
+        </p>
+
+        <h3>
+          ¡Nos vemos en el próximo duelo!
+        </h3>
+
+    </section>
+
+    <section class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6 event-card-mitos text-center">
+          <h2>Únete al grupo de whatsapp</h2>
+          <a href="https://wa.me/573023789285" target="_blank">
+            <button class="event-btn">
+            Unirse
+          </button></a>
+        </div>
+      </div>
+    </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="row align-items-center text-center text-md-start">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          © 2025 La Guarida de Vermi Hobby Center.
+        </div>
+
+        <div class="col-md-8">
+
+          <div class="d-flex flex-column flex-md-row justify-content-md-end gap-3">
+
+            <a href="../HTML/politica.html">Política de privacidad</a>
+
+            <a href="../HTML/terminos.html">Términos y condiciones</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>

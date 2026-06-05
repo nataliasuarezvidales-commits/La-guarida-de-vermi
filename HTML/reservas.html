@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservas</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+ <link rel="stylesheet" href="../CSS/stylesheet.css">
+
+</head>
+
+<body>
+
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-xl navbar-dark navbar-custom mi-menu">
+    <div class="container">
+
+      <!-- Logo -->
+      <a class="navbar-brand logo" href="../HTML/index.html">
+        <img src="../IMG/Logoweb.png" alt="logoweb" width="100%" height="70">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+
+        <!-- Menu -->
+        <ul class="navbar-nav mx-auto gap-3">
+          <li class="nav-item dropdown">
+             <a class="nav-link nav-pill" data-bs-toggle="" href="../HTML/tienda.html">Tienda</a>
+            <ul class="dropdown-menu custom-dropdown">
+              <li><a class="downdrop-item" href="../HTML/TCG.html">TCG</a></li>
+              <li><a class="downdrop-item" href="../HTML/Juegosmesa.html">Juegos de mesa</a></li>
+              <li><a class="downdrop-item" href="../HTML/accesorios.html">Accesorios</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" href="../HTML/eventos.html">Eventos</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill active" href="../HTML/reservas.html">Reservas</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" href="../HTML/nosotros.html">Nosotros</a>
+          </li>
+        </ul>
+
+        <!-- Search -->
+        <div class="d-flex align-items-center gap-3">
+          <div class="input-group">
+            <input type="text" class="form-control search-box" placeholder="Buscar">
+            <span class="input-group-text bg-white border-0 rounded-end-pill">
+              <i class="bi bi-search"></i>
+            </span>
+          </div>
+
+          <a href="../HTML/cart.html" class="position-relative text-white">
+            <i class="bi bi-cart3 fs-2"></i>
+             <!-- CONTADOR -->
+                <span id="cartCount"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                    0
+
+                </span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <div class="reservas">
+    <img src="../IMG/imgreservas.jpg" class="img-fluid w-100" alt="reservas">
+  </div>
+
+  <section class="reservation-section py-5">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <!-- Título -->
+                <h2 class="text-center fw-bold mb-5">
+                    Haz tu reserva
+                </h2>
+
+                <!-- Formulario -->
+                <form id="formReserva" novalidate>
+
+                    <!-- Nombre -->
+                    <div class="mb-3">
+                       <input type="text" 
+                              class="form-control custom-input" 
+                              id="name" 
+                              placeholder="Nombre" required>
+                        <div class="invalid-feedback">
+                          Ingresa tu nombre
+                        </div>
+                    </div>
+
+                    <!-- Correo y Celular -->
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <input type="email"
+                                   class="form-control custom-input"
+                                   placeholder="Correo" 
+                                   id="email"
+                                   required>
+                            <div class="invalid-feedback">
+                              Ingresa un correo válido
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <input type="tel"
+                                   class="form-control custom-input"
+                                   placeholder="Celular"
+                                   id="phone"
+                                   required>
+                            <div class="invalid-feedback">
+                              Ingresa un número de celular válido
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Actividad y Personas -->
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <input type="text"
+                                   class="form-control custom-input"
+                                   placeholder="Tipo de actividad">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <input type="number"
+                                   class="form-control custom-input"
+                                   placeholder="Cuantas personas">
+                        </div>
+
+                    </div>
+
+                    <!-- Fecha y Hora -->
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <input type="date"
+                                   class="form-control custom-input">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <input type="time"
+                                   class="form-control custom-input">
+                        </div>
+
+                    </div>
+
+                    <!-- Tiempo -->
+                    <div class="mb-4">
+                        <input type="text"
+                               class="form-control custom-input"
+                               placeholder="Tiempo aproximado">
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="text-center">
+                        <button type="submit"
+                                class="btn reservation-btn px-5">
+                            Enviar
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="row align-items-center text-center text-md-start">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          © 2025 La Guarida de Vermi Hobby Center.
+        </div>
+
+        <div class="col-md-8">
+
+          <div class="d-flex flex-column flex-md-row justify-content-md-end gap-3">
+
+            <a href="../HTML/politica.html">Política de privacidad</a>
+
+            <a href="../HTML/terminos.html">Términos y condiciones</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const formulario = document.getElementById("formReserva");
+
+    // Validación mientras escribe
+    formulario.querySelectorAll("input, select, textarea").forEach(campo => {
+
+        campo.addEventListener("input", () => {
+
+            if (campo.checkValidity()) {
+                campo.classList.remove("is-invalid");
+                campo.classList.add("is-valid");
+            } else {
+                campo.classList.remove("is-valid");
+                campo.classList.add("is-invalid");
+            }
+
+        });
+
+    });
+
+    // Validación al enviar
+    formulario.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        let valido = true;
+
+        formulario.querySelectorAll("input, select, textarea").forEach(campo => {
+
+            if (campo.checkValidity()) {
+                campo.classList.remove("is-invalid");
+                campo.classList.add("is-valid");
+            } else {
+                campo.classList.remove("is-valid");
+                campo.classList.add("is-invalid");
+                valido = false;
+            }
+
+        });
+
+        if (valido) {
+            alert("Formulario enviado correctamente");
+            // Aquí puedes enviar los datos
+        }
+
+    });
+
+});
+  </script>
+
+</body>
+</html>
