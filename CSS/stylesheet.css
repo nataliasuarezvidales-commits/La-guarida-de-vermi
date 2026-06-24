@@ -4,6 +4,10 @@ body{
       text-decoration: none;
     }
 
+html {
+  scroll-behavior: smooth;
+}    
+
 p {
     font-size: 20px;
 }
@@ -983,3 +987,12 @@ a {
         .card-cart button:hover {
           color: #60785d;
         }
+
+  .btn-primary {
+    background-color: #4f654d;
+  }
+
+  .btn-primary:hover {
+    color: #ffffff;
+    background-color: #7b9a76;
+  }

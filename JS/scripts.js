@@ -79,3 +79,26 @@ const deleteButtons = document.querySelectorAll('.delete');
 
     });
   });
+
+//boton volver arriba
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if ( window.scrollY > 300) {
+    backToTop.classList.remove('d-none');
+  } else {
+    backToTop.classList.add('d-none');
+  }
+})
+
+//carrusel
+const carousel = document.getElementById('heroCarousel');
+const carouselInstance  = bootstrap.Carousel.getOrCreateInstance(carousel);
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+        carouselInstance.prev();
+    }
+
+    if (e.key === 'ArrowRight') {
+        carouselInstance.next();
+    }
+});
