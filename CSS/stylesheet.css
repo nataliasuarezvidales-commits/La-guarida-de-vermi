@@ -485,6 +485,10 @@ a {
       color: white;
     }
 
+    .product-item.hidden {
+      display: none;
+    }
+
     /* Eventos */
     .section-title{
       font-size: 2.3rem;
