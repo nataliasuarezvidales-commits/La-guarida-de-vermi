@@ -213,7 +213,7 @@
             <div class="mt-5">
 
                 <button 
-                    class="btn cart-btn px-5 py-3 fw-bold"
+                    class="btn cart-btn px-5 py-3 fw-bold btn-cart"
                     id="addToCartBtn" aria-label="agrega al carrito">
 
                     <i class="bi bi-cart-plus"></i>
@@ -271,7 +271,7 @@
 
                         <p>$50.000</p>
 
-                        <button class="mini-cart-btn" aria-label="agregar al carrito">
+                        <button class="mini-cart-btn btn-cart" aria-label="agregar al carrito">
                             Agregar al carrito
                         </button>
 
@@ -294,7 +294,7 @@
 
                         <p>$50.000</p>
 
-                        <button class="mini-cart-btn" aria-label="agregar al carrito">
+                        <button class="mini-cart-btn btn-cart" aria-label="agregar al carrito">
                             Agregar al carrito
                         </button>
                     </a>
@@ -319,7 +319,7 @@
 
                         </a>
 
-                        <button class="mini-cart-btn" aria-label="agregar al carrito">
+                        <button class="mini-cart-btn btn-cart" aria-label="agregar al carrito">
                             Agregar al carrito
                         </button>
 
@@ -343,7 +343,7 @@
 
                         </a>
 
-                        <button class="mini-cart-btn" aria-label="agregar al carrito">
+                        <button class="mini-cart-btn btn-cart" aria-label="agregar al carrito">
                             Agregar al carrito
                         </button>
 
@@ -389,23 +389,19 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-     // Código del carrito
-        const addToCartBtn = document.getElementById("addToCartBtn");
-        // ...
-
-        // Código del thumbnail activo
-        const carousel = document.getElementById("productCarousel");
+    // Código del thumbnail activo
+    const carousel = document.getElementById("productCarousel");
         const thumbnails = document.querySelectorAll(".thumb-img");
 
-        carousel.addEventListener("slid.bs.carousel", function (event) {
+    carousel.addEventListener("slid.bs.carousel", function(event) {
 
-            thumbnails.forEach(thumb => {
-                thumb.classList.remove("active-thumb");
-            });
-
-            thumbnails[event.to].classList.add("active-thumb");
-
+        thumbnails.forEach(thumb => {
+            thumb.classList.remove("active-thumb");
         });
+
+        thumbnails[event.to].classList.add("active-thumb");
+
+    });
   </script>
 
   <script>
@@ -423,6 +419,8 @@
             }
         });
     </script>
+
+    <script src="../JS/scripts.js"></script>
 
 </body>
 </html>
