@@ -32,7 +32,7 @@
 
       <!-- Logo -->
       <a class="navbar-brand logo" href="../HTML/index.html">
-        <img src="../IMG/Logoweb.png" alt="logoweb" width="100%" height="70">
+        <img src="../IMG/Logoweb.png" alt="logo la guarida de vermi" width="100%" height="70">
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -44,37 +44,37 @@
         <!-- Menu -->
         <ul class="navbar-nav mx-auto gap-3">
           <li class="nav-item dropdown">
-             <a class="nav-link nav-pill" data-bs-toggle="" href="../HTML/tienda.html">Tienda</a>
+             <a class="nav-link nav-pill" data-bs-toggle="" href="../HTML/tienda.html" aria-label="tienda">Tienda</a>
             <ul class="dropdown-menu custom-dropdown">
-              <li><a class="downdrop-item" href="../HTML/TCG.html">TCG</a></li>
-              <li><a class="downdrop-item" href="../HTML/Juegosmesa.html">Juegos de mesa</a></li>
-              <li><a class="downdrop-item" href="../HTML/accesorios.html">Accesorios</a></li>
+              <li><a class="downdrop-item" href="../HTML/TCG.html" aria-label="tcg">TCG</a></li>
+              <li><a class="downdrop-item" href="../HTML/Juegosmesa.html" aria-label="juegos de mesa">Juegos de mesa</a></li>
+              <li><a class="downdrop-item" href="../HTML/accesorios.html" aria-label="accesorios">Accesorios</a></li>
             </ul>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link nav-pill" href="../HTML/eventos.html">Eventos</a>
+            <a class="nav-link nav-pill" href="../HTML/eventos.html" aria-label="eventos">Eventos</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link nav-pill active" href="../HTML/reservas.html">Reservas</a>
+            <a class="nav-link nav-pill active" href="../HTML/reservas.php" aria-label="reservas">Reservas</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link nav-pill" href="../HTML/nosotros.html">Nosotros</a>
+            <a class="nav-link nav-pill" href="../HTML/nosotros.php" aria-label="nosotros">Nosotros</a>
           </li>
         </ul>
 
         <!-- Search -->
         <div class="d-flex align-items-center gap-3">
           <div class="input-group">
-            <input type="text" class="form-control search-box" placeholder="Buscar">
+            <input type="text" class="form-control search-box" placeholder="Buscar" aria-label="buscar">
             <span class="input-group-text bg-white border-0 rounded-end-pill">
               <i class="bi bi-search"></i>
             </span>
           </div>
 
-          <a href="../HTML/cart.html" class="position-relative text-white">
+          <a href="../HTML/cart.html" class="position-relative text-white" aria-label="carrito de compras">
             <i class="bi bi-cart3 fs-2"></i>
              <!-- CONTADOR -->
                 <span id="cartCount"
@@ -91,7 +91,7 @@
   </nav>
 
   <div class="reservas">
-    <img src="../IMG/imgreservas.jpg" class="img-fluid w-100" alt="reservas">
+    <img src="../IMG/imgreservas.jpg" class="img-fluid w-100">
   </div>
 
   <section class="reservation-section py-5">
@@ -106,17 +106,14 @@
                 </h2>
 
                 <!-- Formulario -->
-                <form id="formReserva" novalidate>
+                <form id="formReserva" method="POST" action="reserva.php">
 
                     <!-- Nombre -->
                     <div class="mb-3">
                        <input type="text" 
                               class="form-control custom-input" 
-                              id="name" 
-                              placeholder="Nombre" required>
-                        <div class="invalid-feedback">
-                          Ingresa tu nombre
-                        </div>
+                              name="name"
+                              placeholder="Nombre" aria-label="nombre" required>
                     </div>
 
                     <!-- Correo y Celular -->
@@ -126,22 +123,15 @@
                             <input type="email"
                                    class="form-control custom-input"
                                    placeholder="Correo" 
-                                   id="email"
+                                   name="email" aria-label="email"
                                    required>
-                            <div class="invalid-feedback">
-                              Ingresa un correo válido
-                            </div>
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <input type="tel"
                                    class="form-control custom-input"
-                                   placeholder="Celular"
-                                   id="phone"
+                                   placeholder="Celular" name="phone" aria-label="celular"
                                    required>
-                            <div class="invalid-feedback">
-                              Ingresa un número de celular válido
-                            </div>
                         </div>
 
                     </div>
@@ -151,13 +141,13 @@
 
                         <div class="col-md-6 mb-3">
                             <input type="text"
-                                   class="form-control custom-input"
+                                   class="form-control custom-input" name="activity" aria-label="tipo de actividad"
                                    placeholder="Tipo de actividad">
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <input type="number"
-                                   class="form-control custom-input"
+                                   class="form-control custom-input" name="quantity" aria-label="cuantas personas"
                                    placeholder="Cuantas personas">
                         </div>
 
@@ -167,12 +157,12 @@
                     <div class="row">
 
                         <div class="col-md-6 mb-3">
-                            <input type="date"
+                            <input type="date" name="date" aria-label="fecha"
                                    class="form-control custom-input">
                         </div>
 
                         <div class="col-md-6 mb-3">
-                            <input type="time"
+                            <input type="time" name="hour" aria-label="hora"
                                    class="form-control custom-input">
                         </div>
 
@@ -180,20 +170,22 @@
 
                     <!-- Tiempo -->
                     <div class="mb-4">
-                        <input type="text"
-                               class="form-control custom-input"
-                               placeholder="Tiempo aproximado">
+                        <input type="text" name="time"
+                               class="form-control custom-input" aria-label="Tiempo aproximado"
+                               placeholder="Tiempo aproximado"> 
                     </div>
 
                     <!-- Botón -->
                     <div class="text-center">
-                        <button type="submit"
-                                class="btn reservation-btn px-5">
-                            Enviar
-                        </button>
+                        <input type="submit" name="register"
+                                class="btn reservation-btn px-5" value="Enviar" aria-label="enviar">
                     </div>
 
                 </form>
+
+              <?php
+              include("reserva.php");
+              ?>
 
             </div>
 
@@ -217,9 +209,9 @@
 
           <div class="d-flex flex-column flex-md-row justify-content-md-end gap-3">
 
-            <a href="../HTML/politica.html">Política de privacidad</a>
+            <a href="../HTML/politica.html" aria-label="Política de privacidad">Política de privacidad</a>
 
-            <a href="../HTML/terminos.html">Términos y condiciones</a>
+            <a href="../HTML/terminos.html" aria-label="Términos y condiciones">Términos y condiciones</a>
 
           </div>
 
@@ -233,57 +225,40 @@
 <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <?php if (isset($_GET['enviado'])): ?>
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-    const formulario = document.getElementById("formReserva");
-
-    // Validación mientras escribe
-    formulario.querySelectorAll("input, select, textarea").forEach(campo => {
-
-        campo.addEventListener("input", () => {
-
-            if (campo.checkValidity()) {
-                campo.classList.remove("is-invalid");
-                campo.classList.add("is-valid");
-            } else {
-                campo.classList.remove("is-valid");
-                campo.classList.add("is-invalid");
-            }
-
-        });
-
-    });
-
-    // Validación al enviar
-    formulario.addEventListener("submit", function(e) {
-
-        e.preventDefault();
-
-        let valido = true;
-
-        formulario.querySelectorAll("input, select, textarea").forEach(campo => {
-
-            if (campo.checkValidity()) {
-                campo.classList.remove("is-invalid");
-                campo.classList.add("is-valid");
-            } else {
-                campo.classList.remove("is-valid");
-                campo.classList.add("is-invalid");
-                valido = false;
-            }
-
-        });
-
-        if (valido) {
-            alert("Formulario enviado correctamente");
-            // Aquí puedes enviar los datos
-        }
-
-    });
-
-});
+  Swal.fire({
+      icon: 'success',
+      title: '¡Reserva enviada!',
+      text: 'Te contactaremos pronto',
+      confirmButtonColor: '#4f654d'
+  });
   </script>
+  <?php endif; ?>
 
+  <?php if (isset($_GET['error'])): ?>
+  <script>
+  Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'No se pudo enviar la reserva',
+      confirmButtonColor: '#4f654d'
+  });
+  </script>
+  <?php endif; ?>
+
+  <?php if (isset($_GET['vacio'])): ?>
+  <script>
+  Swal.fire({
+      icon: 'warning',
+      title: 'Campos vacíos',
+      text: 'Completa todos los campos',
+      confirmButtonColor: '#4f654d'
+  });
+  </script>
+  <?php endif; ?>
+ 
 </body>
 </html>

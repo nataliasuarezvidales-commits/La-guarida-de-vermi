@@ -32,7 +32,7 @@
 
       <!-- Logo -->
       <a class="navbar-brand logo" href="../HTML/index.html">
-        <img src="../IMG/Logoweb.png" alt="logoweb" width="100%" height="70">
+        <img src="../IMG/Logoweb.png" alt="logo la guarida de vermi" width="100%" height="70">
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -44,38 +44,38 @@
         <!-- Menu -->
         <ul class="navbar-nav mx-auto gap-3">
           <li class="nav-item dropdown">
-            <a class="nav-link nav-pill" data-bs-toggle="" href="../HTML/tienda.html">Tienda</a>
+            <a class="nav-link nav-pill" data-bs-toggle="" href="../HTML/tienda.html" aria-label="tienda">Tienda</a>
             <ul class="dropdown-menu custom-dropdown">
-              <li><a class="downdrop-item" href="../HTML/TCG.html">TCG</a></li>
-              <li><a class="downdrop-item" href="../HTML/Juegosmesa.html">Juegos de mesa</a></li>
-              <li><a class="downdrop-item" href="../HTML/accesorios.html">Accesorios</a>
+              <li><a class="downdrop-item" href="../HTML/TCG.html" aria-label="tcg">TCG</a></li>
+              <li><a class="downdrop-item" href="../HTML/Juegosmesa.html" aria-label="juegos de mesa">Juegos de mesa</a></li>
+              <li><a class="downdrop-item" href="../HTML/accesorios.html" aria-label="accesorios">Accesorios</a>
               </li>
             </ul>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link nav-pill" href="../HTML/eventos.html">Eventos</a>
+            <a class="nav-link nav-pill" href="../HTML/eventos.html" aria-label="eventos">Eventos</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link nav-pill" href="../HTML/reservas.html">Reservas</a>
+            <a class="nav-link nav-pill" href="../HTML/reservas.php" aria-label="reservas">Reservas</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link nav-pill" href="../HTML/nosotros.html">Nosotros</a>
+            <a class="nav-link nav-pill" href="../HTML/nosotros.php" aria-label="nosotros">Nosotros</a>
           </li>
         </ul>
 
         <!-- Search -->
         <div class="d-flex align-items-center gap-3">
           <div class="input-group">
-            <input type="text" class="form-control search-box" placeholder="Buscar">
+            <input type="text" class="form-control search-box" placeholder="Buscar" aria-label="Buscar">
             <span class="input-group-text bg-white border-0 rounded-end-pill">
               <i class="bi bi-search"></i>
             </span>
           </div>
 
-            <a href="../HTML/cart.html" class="position-relative text-white">
+            <a href="../HTML/cart.html" class="position-relative text-white" aria-label="carrito de compras">
 
             <i class="bi bi-cart3 fs-2"></i>
 
@@ -106,18 +106,8 @@
 
             <div class="d-flex justify-content-center align-items-center gap-3">
 
-                <!-- BOTON IZQUIERDO -->
-                <button class="arrow-btn" 
-                        type="button" 
-                        data-bs-target="#productCarousel" 
-                        data-bs-slide="prev">
-
-                    <i class="bi bi-chevron-left"></i>
-
-                </button>
-
                 <!-- CARRUSEL -->
-                <div id="productCarousel" class="carousel slide">
+                <div id="productCarousel" class="carousel slide" tabindex="0">
 
                     <div class="carousel-inner">
 
@@ -125,18 +115,30 @@
                         <div class="carousel-item active">
                             <img src="../IMG/booster-onepiece.png"
                                 class="main-product d-block"
-                                alt="deck box">
+                                alt="boostser one Piece">
                         </div>
 
                     </div>
 
                 </div>
 
+                  <!-- BOTON IZQUIERDO -->
+                <button class="arrow-btn" 
+                        type="button" 
+                        data-bs-target="#productCarousel" 
+                        data-bs-slide="prev"
+                        aria-label="imagen anterior">
+
+                    <i class="bi bi-chevron-left"></i>
+
+                </button>
+
+
                 <!-- BOTON DERECHO -->
                 <button class="arrow-btn" 
                         type="button" 
                         data-bs-target="#productCarousel" 
-                        data-bs-slide="next">
+                        data-bs-slide="next" aria-label="imagen siguiente">
 
                     <i class="bi bi-chevron-right"></i>
 
@@ -152,7 +154,7 @@
                 <img src="../IMG/booster-onepiece.png"
                     class="thumb-img active-thumb"
                     data-bs-target="#productCarousel"
-                    data-bs-slide-to="0">
+                    data-bs-slide-to="0" alt="boostser one Piece">
 
             </div>
 
@@ -185,14 +187,14 @@
                 <label class="form-label">
                     Cantidad
                 </label>
-                <input type="number" class="form-control qty-input" value="1">
+                <input type="number" class="form-control qty-input" value="1" aria-label="cantidad">
             </div>
 
             <div class="mt-5">
 
                 <button 
                     class="btn cart-btn px-5 py-3 fw-bold"
-                    id="addToCartBtn">
+                    id="addToCartBtn" aria-label="agregar al carrito">
 
                     <i class="bi bi-cart-plus"></i>
                     Agregar al carrito
@@ -249,7 +251,7 @@
 
                         <p>$50.000</p>
 
-                        <button class="mini-cart-btn">
+                        <button class="mini-cart-btn" aria-label="agregar al carrito">
                             Agregar al carrito
                         </button>
 
@@ -266,13 +268,13 @@
                     <div class="product-card-destacado  text-center">
                     
                     <a href="../HTML/andalavar.html">
-                        <img src="../IMG/andalavar.png" alt="Anda a lavar">
+                        <img src="../IMG/andalavar.png" alt="juego de mesa anda a lavar">
 
                         <h5>Anda a Lavar</h5>
 
                         <p>$50.000</p>
 
-                        <button class="mini-cart-btn">
+                        <button class="mini-cart-btn" aria-label="agregar al carrito">
                             Agregar al carrito
                         </button>
                     </a>
@@ -289,7 +291,7 @@
 
                         <a href="../HTML/deckbox.html">
 
-                        <img src="../IMG/caja-boba-fett.png" alt="Unstable unicorns">
+                        <img src="../IMG/caja-boba-fett.png" alt="Deck box Boba Fett">
 
                         <h5>Deck box Boba Fett</h5>
 
@@ -297,7 +299,7 @@
 
                         </a>
 
-                        <button class="mini-cart-btn">
+                        <button class="mini-cart-btn" aria-label="agregar al carrito">
                             Agregar al carrito
                         </button>
 
@@ -313,7 +315,7 @@
 
                         <a href="../HTML/azul.html">
 
-                        <img src="../IMG/azul.jpg" alt="azul">
+                        <img src="../IMG/azul.jpg" alt="azul juego de mesa">
 
                         <h5>Azul juego de mesa</h5>
 
@@ -321,7 +323,7 @@
 
                         </a>
 
-                        <button class="mini-cart-btn">
+                        <button class="mini-cart-btn" aria-label="agregar al carrito">
                             Agregar al carrito
                         </button>
 
@@ -349,9 +351,9 @@
 
           <div class="d-flex flex-column flex-md-row justify-content-md-end gap-3">
 
-            <a href="../HTML/politica.html">Política de privacidad</a>
+            <a href="../HTML/politica.html" aria-label="Política de privacidad">Política de privacidad</a>
 
-            <a href="../HTML/terminos.html">Términos y condiciones</a>
+            <a href="../HTML/terminos.html" aria-label="Términos y condiciones">Términos y condiciones</a>
 
           </div>
 

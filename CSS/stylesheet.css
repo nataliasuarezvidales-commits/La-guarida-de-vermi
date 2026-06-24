@@ -189,7 +189,7 @@ a {
     .section-product{
       text-align: center;
       margin-bottom: 5px;
-      font-size: 2.3rem;
+      font-size: 35px;
       font-weight: 700;
     }
 
@@ -208,6 +208,15 @@ a {
       border: 1px solid #ddd;
       transition: 0.3s;
       padding: 30px 2px;
+    }
+
+    .card-body h2 {
+      font-size: 18px;
+      color: #1f1f1f;
+    }
+
+    .card-body h3 {
+      font-size: 16px;
     }
 
     .product-card:hover {
@@ -480,7 +489,13 @@ a {
     .section-title{
       font-size: 2.3rem;
       font-weight: bold;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      margin-bottom: 25px;
     }
 
     .event-card-eventos {
@@ -609,6 +624,20 @@ a {
 
     .custom-input.is-invalid {
       border: 2px solid #dc3545 !important;
+    }
+
+    .success {
+        position: absolute;
+        top: 50px;
+        color: #00c83c;
+        font-size: 18px;
+    }
+
+    .error {
+        position: absolute;
+        top: 50px;
+        color: #e02d00;
+        font-size: 18px;
     }
 
     /*Nosostros*/
